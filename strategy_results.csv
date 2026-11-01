@@ -1,0 +1,5 @@
+,top_3,total_return_%,ending_value_Rs,sharpe,calmar,max_drawdown_%,trading_accuracy_%,costs_paid_%,avg_exposure_%,validation_return_%,validation_sharpe,validation_calmar,validation_max_drawdown_%,validation_accuracy_%,validation_costs_paid_%,validation_avg_exposure_%,backtest_errors
+Strategy 1: higher-exposure confirmed trend,True,289.177,389177.056,1.503,0.993,-14.98,51.394,3.57,46.517,21.902,1.476,1.996,-5.216,51.372,0.42,48.016,0
+Strategy 2: confirmed market trend,True,250.972,350972.089,1.526,1.014,-13.48,51.394,2.7,42.388,19.826,1.487,2.006,-4.718,51.372,0.315,43.512,0
+Strategy 3: trend-gated inverse volatility,True,244.65,344649.973,1.548,0.997,-13.496,51.394,6.388,42.388,19.286,1.498,2.002,-4.605,51.372,1.123,43.512,0
+Equal-weight benchmark,False,1901.365,2001364.53,1.619,1.318,-27.15,51.394,0.3,100.0,51.429,1.529,2.084,-11.062,51.372,0.0,100.0,0
