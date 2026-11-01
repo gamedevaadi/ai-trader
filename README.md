@@ -18,25 +18,6 @@ exposure, and no worse than 15% maximum drawdown on that slice. It remains
 part of the training data, so it is **not** an independent secret-period test
 and does not prove generalization.
 
-## Results
-
-Full-window results include the engine's warm-up and use the local
-transaction cost of 0.003. The same three candidates are shown in the graph;
-the equal-weight benchmark is included as a comparison.
-
-| Candidate | Full return | Ending value | Sharpe | Calmar | Max drawdown | Accuracy | Costs | Avg. exposure | Selection-slice return |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **Strategy 1: higher-exposure confirmed trend** | **289.18%** | **₹389,177** | **1.50** | **0.99** | **-14.98%** | **51.39%** | **3.57%** | **46.52%** | **21.90%** |
-| Strategy 2: confirmed market trend | 250.97% | ₹350,972 | 1.53 | 1.01 | -13.48% | 51.39% | 2.70% | 42.39% | 19.83% |
-| Strategy 3: trend-gated inverse volatility | 244.65% | ₹344,650 | 1.55 | 1.00 | -13.50% | 51.39% | 6.39% | 42.39% | 19.29% |
-| Equal-weight benchmark | 1901.36% | ₹2,001,365 | 1.62 | 1.32 | -27.15% | 51.39% | 0.30% | 100.00% | 51.43% |
-
-These are historical, in-sample comparisons—not predictions. Strategy 1 has
-the highest candidate return but its full-window drawdown (-14.98%) is close
-to the 15% threshold and its Calmar (0.99) is just below 1. Strategy 2 is the
-more conservative candidate. None of the three beats the equal-weight
-benchmark or reaches 52% trading accuracy. Secret-period performance remains
-unknown.
 
 ### Strategy rules
 
