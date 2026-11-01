@@ -42,14 +42,26 @@ unknown.
 
 All three candidates are long-only and keep gross exposure between 30% and 50%.
 
-1. **Higher-exposure confirmed trend (selected):** equal-weight all stocks at
-   50% when the compounded broad-market index is above its 200-day average and
-   has positive 126-day momentum; otherwise allocate 30%.
-2. **Confirmed market trend:** the same market signal, with 45% exposure when
-   confirmed and 30% otherwise.
-3. **Trend-gated inverse volatility:** use the same 45%/30% market-regime
-   exposure as Strategy 2, sized inversely to each stock's trailing 63-day
-   close-to-close volatility.
+1. **Strategy 1 — Higher-exposure confirmed market trend:** invest equally
+   across all stocks at 50% gross exposure when the broad-market index is above
+   its 200-day average and has positive 126-day momentum; otherwise invest
+   30%. **Why use it:** it had the highest return of the three in the tested
+   window (289.18%), with maximum drawdown of -14.98%, just inside the 15%
+   threshold. Its Calmar ratio was 0.993, narrowly below the 1.0 target.
+2. **Strategy 2 — Confirmed market trend:** use the same market confirmation,
+   investing 45% when the trend is positive and 30% otherwise, with equal
+   weights across stocks. **Why use it:** it is the more conservative
+   alternative, with the lowest maximum drawdown (-13.48%) and the only Calmar
+   ratio above 1 (1.014), while returning 250.97%.
+3. **Strategy 3 — Trend-gated inverse volatility:** use the same 45%/30%
+   market-regime exposure as Strategy 2, distributed inversely to each stock's
+   recent 63-day volatility. **Why use it:** it had the highest Sharpe ratio
+   (1.548), indicating the strongest historical return relative to daily
+   variability, but also the highest trading costs (6.39%).
+
+These are reasons to compare the candidates, not guarantees of future
+performance. On this training window, none beats the equal-weight benchmark,
+and all three have trading accuracy below the 52% target.
 
 The broad-market index compounds the mean daily return across stocks in the
 available history. The agent does not use day-number shortcuts, future prices,
